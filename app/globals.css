@@ -25,7 +25,7 @@ a { color:inherit; text-decoration:none; }
 .site-nav { justify-content:center; }
 .site-nav nav { gap:clamp(18px,4vw,48px); }
 .site-nav nav a { color:rgba(242,239,233,.58); font-weight:700; }
-.hero h1, .section h2, .work h2, .process>h2, .about h2, .contact h2, .service-card h3, .coming-grid h3, .case-content h3 { font-family:var(--display); font-weight:800; font-style:normal; }
+.hero h1, .section h2, .work h2, .process>h2, .about h2, .contact h2, .service-card h3, .coming-grid h3, .case-content h3 { font-family:var(--display); font-weight:500; font-style:normal; color:rgba(242,239,233,.68); }
 .hero h1 em, h2 em, h3 em { font-style:normal; color:rgba(242,239,233,.42); }
 .hero h1, .section h2, .work h2, .process>h2, .about h2, .contact h2 { letter-spacing:-.09em; }
 .case-study { display:block; min-height:0; max-width:980px; }
