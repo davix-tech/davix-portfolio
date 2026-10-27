@@ -63,7 +63,7 @@ export default function Page() {
   }, [])
 
   return (
-    <main className={`site-shell ${loaded ? 'is-loaded' : ''}`} style={{ '--scroll-progress': `${scrollProgress}%`, '--pointer-x': `${pointer.x}%`, '--pointer-y': `${pointer.y}%`, '--parallax-x': `${(pointer.x - 50) * -0.2}px`, '--parallax-y': `${(pointer.y - 50) * -0.16}px`, '--scroll-y': `${scrollY}px` } as React.CSSProperties}>
+    <main className={`site-shell ${loaded ? 'is-loaded' : ''}`} style={{ '--scroll-progress': `${scrollProgress}%`, '--pointer-x': `${pointer.x}%`, '--pointer-y': `${pointer.y}%`, '--parallax-x': `${(pointer.x - 50) * -0.2}px`, '--parallax-y': `${(pointer.y - 50) * -0.16}px`, '--scroll-y': `${scrollY}px`, '--photo-scroll': `${Math.min(scrollY * 0.12, 130)}px`, '--interlude-shift': `${scrollY * -0.025}px` } as React.CSSProperties}>
       {!loaded && <div className="preloader" aria-label="Loading DAVIX"><span>D</span><i /></div>}
       <div className="scroll-progress" aria-hidden="true" />
       <div className="grain" aria-hidden="true" />
