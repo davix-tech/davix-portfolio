@@ -19,6 +19,7 @@ export default function Page() {
   const [loaded, setLoaded] = useState(false)
   const [pointer, setPointer] = useState({ x: 50, y: 38 })
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
     const timer = window.setTimeout(() => setLoaded(true), 900)
@@ -29,6 +30,7 @@ export default function Page() {
     const scroll = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight
       setScrollProgress(max > 0 ? window.scrollY / max * 100 : 0)
+      setScrollY(window.scrollY)
     }
     window.addEventListener('pointermove', move, { passive: true })
     window.addEventListener('scroll', scroll, { passive: true })
@@ -61,7 +63,7 @@ export default function Page() {
   }, [])
 
   return (
-    <main className={`site-shell ${loaded ? 'is-loaded' : ''}`} style={{ '--scroll-progress': `${scrollProgress}%`, '--pointer-x': `${pointer.x}%`, '--pointer-y': `${pointer.y}%`, '--parallax-x': `${(pointer.x - 50) * -0.12}px`, '--parallax-y': `${(pointer.y - 50) * -0.1}px` } as React.CSSProperties}>
+    <main className={`site-shell ${loaded ? 'is-loaded' : ''}`} style={{ '--scroll-progress': `${scrollProgress}%`, '--pointer-x': `${pointer.x}%`, '--pointer-y': `${pointer.y}%`, '--parallax-x': `${(pointer.x - 50) * -0.2}px`, '--parallax-y': `${(pointer.y - 50) * -0.16}px`, '--scroll-y': `${scrollY}px` } as React.CSSProperties}>
       {!loaded && <div className="preloader" aria-label="Loading DAVIX"><span>D</span><i /></div>}
       <div className="scroll-progress" aria-hidden="true" />
       <div className="grain" aria-hidden="true" />
@@ -77,10 +79,12 @@ export default function Page() {
         <div className="hero-topline"><span>PORT HARCOURT, NG</span><span>ENGINEERING / SYSTEMS / IDEAS</span></div>
         <div className="hero-photo-wrap">
           <div className="photo-halo" />
+          <div className="photo-orbit photo-orbit-one" aria-hidden="true" /><div className="photo-orbit photo-orbit-two" aria-hidden="true" />
           <img className="hero-photo" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Black_and_white_portrait_editing_20261027120217-UAiDFUMMT0DIXyPW3dBLLR2MDCBSEb.jpg" alt="Davix, photographed in dramatic black and white" fetchPriority="high" />
           <div className="photo-cutout" aria-hidden="true" />
           <span className="photo-index">FIG. 001 <i /> THE PERSON BEHIND THE PROCESS</span>
         </div>
+        <div className="hero-image-type" aria-hidden="true">DAVIX</div>
         <div className="hero-type" aria-label="Davix builds useful technology">
           <p className="hero-pretitle"><span className="live-dot" /> BUILDING WITH INTENTION</p>
           <h1>Make<br /><span>things</span> <em>matter.</em></h1>
@@ -119,7 +123,7 @@ export default function Page() {
       </section>
 
       <section className="interlude">
-        <div className="interlude-word" aria-hidden="true">WHY<span>?</span></div>
+        <div className="interlude-word" aria-hidden="true">WHY<span>?</span></div><div className="interlude-photo" aria-hidden="true"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Black_and_white_portrait_editing_20261027120217-UAiDFUMMT0DIXyPW3dBLLR2MDCBSEb.jpg" alt="" loading="lazy" /></div>
         <div className="interlude-content" data-reveal><span className="interlude-label">A useful question</span><h2>What if the hard part<br />could feel <em>simple?</em></h2><p>That’s the question I return to. Not because every problem has an elegant answer — but because the search for one is worth doing properly.</p></div>
         <div className="interlude-bottom"><span>QUESTION EVERYTHING</span><span>KEEP WHAT WORKS</span></div>
       </section>
@@ -135,7 +139,7 @@ export default function Page() {
       <section id="about" className="about-section">
         <div className="about-image">
           <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Edit_portrait_photo_20261027120216-qjC6r32SLTLkafCGzTahl5dOqpjDBW.jpg" alt="Davix in a second, quieter portrait" loading="lazy" />
-          <span className="about-image-note">A PERSON, NOT A JOB TITLE.</span>
+          <span className="about-image-note">A PERSON, NOT A JOB TITLE.</span><span className="about-image-word" aria-hidden="true">REAL<br/>PERSON.</span><span className="image-crosshair" aria-hidden="true">+</span>
         </div>
         <div className="about-copy" data-reveal><div className="section-meta"><span>04 — THE HUMAN</span></div><p className="about-kicker">A little about me</p><h2>I’m interested in<br />what we can <em>make possible.</em></h2><p>I’m Davix, a technology builder and founder of PRETHIM. I use APIs and software to solve everyday technology problems — and I’m interested in the thinking that makes a solution genuinely useful, not just technically impressive.</p><p>I’m still learning, building, and changing my mind when the evidence tells me to. That’s part of the work.</p><a className="text-link" href="https://prethim.name.ng" target="_blank" rel="noreferrer">PRETHIM <ArrowUpRight size={16} /></a></div>
       </section>
