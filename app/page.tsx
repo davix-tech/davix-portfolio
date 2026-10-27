@@ -76,26 +76,23 @@ export default function Page() {
 
       <section id="top" className="hero">
         <div className="hero-grid" aria-hidden="true" />
-        <div className="hero-topline"><span>PORT HARCOURT, NG</span><span>ENGINEERING / SYSTEMS / IDEAS</span></div>
+        
         <div className="hero-photo-wrap">
           <div className="photo-halo" />
           <div className="photo-orbit photo-orbit-one" aria-hidden="true" /><div className="photo-orbit photo-orbit-two" aria-hidden="true" />
           <img className="hero-photo" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Black_and_white_portrait_editing_20261027120217-UAiDFUMMT0DIXyPW3dBLLR2MDCBSEb.jpg" alt="Davix, photographed in dramatic black and white" fetchPriority="high" />
           <div className="photo-cutout" aria-hidden="true" />
-          <span className="photo-index">FIG. 001 <i /> THE PERSON BEHIND THE PROCESS</span>
+          
         </div>
-        <div className="hero-image-type" aria-hidden="true">DAVIX</div>
+        <div className="hero-image-type" aria-hidden="true">DAVIX</div><div className="hero-ghost-phrase" aria-hidden="true">Make things<br/><i>matter.</i></div>
         <div className="hero-type" aria-label="Davix builds useful technology">
-          <p className="hero-pretitle"><span className="live-dot" /> BUILDING WITH INTENTION</p>
+          
           <h1>Make<br /><span>things</span> <em>matter.</em></h1>
           <div className="hero-lower">
             <p className="hero-description">I’m Davix — a software builder drawn to hard problems, useful systems, and the details that make technology feel effortless.</p>
             <a className="glass-cta" href="#about"><span className="cta-arrow"><ArrowDownRight size={19} /></span><span>Get to know me</span><MoveUpRight className="cta-tail" size={15} /></a>
           </div>
         </div>
-        <div className="hero-vertical" aria-hidden="true">IDEAS INTO SYSTEMS <span>—</span> SYSTEMS INTO IMPACT</div>
-        <a className="hero-scroll" href="#intro"><span>SCROLL TO DISCOVER</span><span className="scroll-line" /></a>
-        <div className="hero-stamp" aria-hidden="true"><span>DVX</span><i>BUILT<br />WITH<br />INTENT</i></div>
       </section>
 
       <section id="intro" className="intro-section">
