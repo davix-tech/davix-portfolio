@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { ArrowUpRight, ChevronDown, Mail, Phone, Send, Sparkles } from 'lucide-react'
+import { ArrowUpRight, Mail, Phone, Send, Sparkles } from 'lucide-react'
 
 const capabilities = ['Backend Architecture', 'APIs & Integrations', 'Authentication', 'Data Processing', 'Ecommerce Systems', 'Automation', 'Intelligent Software']
 const services = [
@@ -28,9 +28,7 @@ export default function Page() {
     <main className={`site-shell ${loaded ? 'is-loaded' : ''}`}>
       {!loaded && <div className="preloader"><span>D</span><span>A</span><span>V</span><span>I</span><span>X</span><i /></div>}
       <header className="site-nav">
-        <a className="brand" href="#top">DAVIX<span>.</span></a>
         <nav><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-        <a className="nav-cta" href="#contact">Hire me <ArrowUpRight size={15} /></a>
       </header>
 
       <section id="top" className="hero" style={{ '--spot-x': `${spotlight.x}%`, '--spot-y': `${spotlight.y}%` } as React.CSSProperties}>
@@ -48,7 +46,7 @@ export default function Page() {
 
       <section id="services" className="section services"><SectionLabel title="What I build" /><div className="section-intro"><h2>Infrastructure for<br /><em>ambitious</em> operators.</h2><p>I design and build the invisible systems that make a business feel effortless — from first transaction to full scale.</p></div><div className="service-grid">{services.map(([title, copy]) => <a className="service-card" href="#contact" key={title}><div><h3>{title}</h3><p>{copy}</p></div><ArrowUpRight className="service-arrow" /></a>)}</div><CTA label="Have a complex problem? Let's talk." /></section>
 
-      <section id="work" className="section work"><SectionLabel title="Selected work" /><div className="work-heading"><h2>Built for the<br /><em>real world.</em></h2></div><article className="case-study"><div className="case-image"><div className="case-glow" /><span className="case-label">REDEN / 2026</span></div><div className="case-content"><div className="case-top"><span className="gold-label">In development</span><span>Adaptive commerce orchestration</span></div><h3>REDEN<span>.</span></h3><p className="case-lead">A system that helps ecommerce businesses understand customer behaviour, recognise purchase intent and turn decisions into business outcomes.</p><div className="case-details"><div><small>Problem</small><p>Commerce data is scattered. Good decisions arrive too late.</p></div><div><small>Approach</small><p>One intelligent layer across behaviour, operations and action.</p></div><div><small>Stack</small><p>Architecture · Backend · Auth · Data · Intelligence</p></div></div><a className="text-link" href="#contact">Discuss the system <ArrowUpRight size={15} /></a></div></article><div className="coming-grid"><div><span>Coming next</span><h3>Operations<br /><em>without friction.</em></h3></div><div><span>Coming next</span><h3>Signal in<br /><em>the noise.</em></h3></div></div><div className="testimonial-slot"><Sparkles size={17} /><p>Client perspective will live here.</p><span>Testimonial placeholder</span></div><CTA label="See what we could build together." /></section>
+      <section id="work" className="section work"><SectionLabel title="Selected work" /><div className="work-heading"><h2>Built for the<br /><em>real world.</em></h2></div><article className="case-study"><div className="case-content"><div className="case-top"><span className="gold-label">In development</span><span>Adaptive commerce orchestration</span></div><h3>REDEN<span>.</span></h3><p className="case-lead">A system that helps ecommerce businesses understand customer behaviour, recognise purchase intent and turn decisions into business outcomes.</p><div className="case-details"><div><small>Problem</small><p>Commerce data is scattered. Good decisions arrive too late.</p></div><div><small>Approach</small><p>One intelligent layer across behaviour, operations and action.</p></div><div><small>Stack</small><p>Architecture · Backend · Auth · Data · Intelligence</p></div></div><a className="text-link" href="#contact">Discuss the system <ArrowUpRight size={15} /></a></div></article><div className="coming-grid"><div><span>Coming next</span><h3>Operations<br /><em>without friction.</em></h3></div><div><span>Coming next</span><h3>Signal in<br /><em>the noise.</em></h3></div></div><div className="testimonial-slot"><Sparkles size={17} /><p>Client perspective will live here.</p><span>Testimonial placeholder</span></div><CTA label="See what we could build together." /></section>
 
       <section className="philosophy"><SectionLabel title="The point of it" /><div className="philosophy-grid"><h2>I&apos;m interested in what technology can solve, what it can change, and what becomes possible when someone decides to <em>build instead of waiting.</em></h2><div className="principles">{principles.map((p) => <div key={p}><p>{p}</p></div>)}</div></div></section>
 
