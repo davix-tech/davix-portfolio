@@ -87,7 +87,7 @@ export default function Page() {
         <a className="nav-contact" href="#contact">Let&apos;s talk <ArrowUpRight size={15} /></a>
       </header>
 
-      <section id="top" className="hero" style={{ '--spot-x': `${spotlight.x}%`, '--spot-y': `${spotlight.y}%` } as React.CSSProperties}>
+      <section id="top" className="hero" style={{ '--spot-x': `${spotlight.x}%`, '--spot-y': `${spotlight.y}%`, '--parallax-x': `${(spotlight.x - 50) * -0.12}px`, '--parallax-y': `${(spotlight.y - 50) * -0.1}px` } as React.CSSProperties}>
         <div className="hero-number" aria-hidden="true">D.</div>
         <div className="hero-name" aria-hidden="true">DAVIX</div>
         <div className="hero-portrait">
