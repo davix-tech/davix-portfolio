@@ -311,3 +311,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-actions { gap: 12px; }
   .button { gap: 8px; font-size: 12px; }
 }
+
+
+/* Hero copy enters after the initial light reveal. */
+.hero-copy { opacity: 0; transform: translateY(22px); }
+.is-loaded .hero-copy { animation: hero-copy-enter 1.1s .12s cubic-bezier(.2,.7,.2,1) forwards; }
+@keyframes hero-copy-enter {
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy { opacity: 1; transform: none; }
+  .is-loaded .hero-copy { animation: none; }
+}
