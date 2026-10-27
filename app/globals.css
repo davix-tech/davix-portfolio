@@ -242,7 +242,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 
 /* Image-led art direction: the portrait is a moving layer in the layout, not a card. */
-.hero { --photo-scroll: min(calc(var(--scroll-y, 0px) * .12), 130px); }
+.hero { --photo-scroll: 0px; }
 .hero-photo-wrap { transform: translate3d(calc(var(--parallax-x, 0px) * -.22), calc(var(--photo-scroll) + var(--parallax-y, 0px) * -.15), 0) rotate(1.2deg); transition: border-radius .8s cubic-bezier(.2,.8,.2,1), transform .25s ease-out; will-change: transform; }
 .hero-photo-wrap:after { content:""; position:absolute; z-index:2; inset:0; pointer-events:none; background:radial-gradient(ellipse at var(--pointer-x, 50%) var(--pointer-y, 38%), rgba(214,250,104,.17), transparent 48%),linear-gradient(145deg,transparent 45%,rgba(64,56,255,.24)); mix-blend-mode:screen; }
 .photo-halo { inset: 5% 5% -2%; background: var(--acid); filter: blur(.2px); }
@@ -267,7 +267,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .image-crosshair { position:absolute; z-index:3; top:50%; left:50%; color:var(--acid); font:300 4rem/1 var(--display); transform:translate(-50%,-50%) scale(.5); opacity:0; transition:opacity .35s,transform .5s cubic-bezier(.2,.8,.2,1); pointer-events:none; }
 .about-image:hover .image-crosshair { opacity:1; transform:translate(-50%,-50%) scale(1); }
 .interlude { isolation:isolate; }
-.interlude-photo { position:absolute; z-index:-1; right:8%; top:50%; width:min(34vw,480px); height:76%; transform:translateY(-50%) rotate(7deg) translateY(calc(var(--scroll-y,0px) * -.025)); overflow:hidden; border-radius:48% 48% 3px 3px; opacity:.26; mix-blend-mode:screen; transition:opacity .5s ease,transform .5s ease; }
+.interlude-photo { position:absolute; z-index:-1; right:8%; top:50%; width:min(34vw,480px); height:76%; transform:translateY(-50%) rotate(7deg) translateY(var(--interlude-shift, 0px)); overflow:hidden; border-radius:48% 48% 3px 3px; opacity:.26; mix-blend-mode:screen; transition:opacity .5s ease,transform .5s ease; }
 .interlude-photo img { width:100%; height:100%; object-fit:cover; object-position:50% 12%; filter:grayscale(1) contrast(1.2); }
 .interlude:hover .interlude-photo { opacity:.42; transform:translateY(-50%) rotate(2deg) scale(1.035); }
 .interlude-content { position:relative; z-index:2; }
