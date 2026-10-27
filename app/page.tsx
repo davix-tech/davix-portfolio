@@ -21,6 +21,28 @@ export default function Page() {
     const timer = window.setTimeout(() => setLoaded(true), 1500)
     const move = (event: MouseEvent) => setSpotlight({ x: (event.clientX / window.innerWidth) * 100, y: (event.clientY / window.innerHeight) * 100 })
     window.addEventListener('mousemove', move)
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const revealTargets = document.querySelectorAll(
+      '.section-label, .hero-copy > *, .section-intro > *, .service-card, .case-study, .coming-grid > div, .testimonial-slot, .philosophy-grid > *, .process-step, .about-grid > *, .contact-heading, .contact-grid > *'
+    )
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      revealTargets.forEach((element) => element.classList.add('is-visible'))
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' })
+      revealTargets.forEach((element) => {
+        element.classList.add('reveal-ready')
+        observer.observe(element)
+      })
+    }
+
     return () => { window.clearTimeout(timer); window.removeEventListener('mousemove', move) }
   }, [])
 
