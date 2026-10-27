@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { ArrowDownRight, ArrowUpRight, Github, Mail, MoveUpRight } from 'lucide-react'
+import { ArrowDownRight, ArrowUpRight, Mail, MessageCircle, MoveUpRight, Phone } from 'lucide-react'
 
 const capabilities = [
   { n: '01', title: 'Product-minded engineering', detail: 'I start with the friction, not the framework. What should become easier, faster, or possible?' },
@@ -95,8 +95,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="intro" className="intro-section">
-        <div className="section-meta" data-reveal><span>01 — THE POINT</span><span>LESS NOISE. MORE MEANING.</span></div>
+      <section id="intro" className="intro-section numbered-section" data-index="I">
+        <div className="section-meta" data-reveal><span>THE POINT</span><span>LESS NOISE. MORE MEANING.</span></div>
         <div className="intro-grid">
           <p className="intro-side" data-reveal>Technology should earn its place.</p>
           <h2 data-reveal>Not more software.<br />Just <span>better answers.</span></h2>
@@ -105,8 +105,8 @@ export default function Page() {
         <div className="intro-foot" data-reveal><span>THINK CLEARLY</span><span className="intro-foot-line" /><span>BUILD DELIBERATELY</span></div>
       </section>
 
-      <section id="approach" className="approach-section">
-        <div className="section-meta" data-reveal><span>02 — THE WORK</span><span>THINGS I LIKE TO SOLVE</span></div>
+      <section id="approach" className="approach-section numbered-section" data-index="II">
+        <div className="section-meta" data-reveal><span>THE WORK</span><span>THINGS I LIKE TO SOLVE</span></div>
         <div className="approach-heading" data-reveal><h2>Where ideas<br />become <em>useful.</em></h2><p>Different problems need different tools. The common thread is making the moving parts work together.</p></div>
         <div className="capability-list">
           {capabilities.map((item, i) => (
@@ -125,25 +125,25 @@ export default function Page() {
         <div className="interlude-bottom"><span>QUESTION EVERYTHING</span><span>KEEP WHAT WORKS</span></div>
       </section>
 
-      <section className="method-section">
-        <div className="section-meta" data-reveal><span>03 — THE METHOD</span><span>HOW I APPROACH A PROBLEM</span></div>
+      <section className="method-section numbered-section" data-index="III">
+        <div className="section-meta" data-reveal><span>THE METHOD</span><span>HOW I APPROACH A PROBLEM</span></div>
         <div className="method-heading" data-reveal><h2>Good work<br />starts <em>before code.</em></h2></div>
         <div className="principle-grid">
           {principles.map((item) => <article className="principle" key={item.n} data-reveal><span>{item.n}</span><h3>{item.title}</h3><p>{item.copy}</p></article>)}
         </div>
       </section>
 
-      <section id="about" className="about-section">
+      <section id="about" className="about-section numbered-section" data-index="IV">
         <div className="about-image">
           <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Edit_portrait_photo_20261027120216-qjC6r32SLTLkafCGzTahl5dOqpjDBW.jpg" alt="Davix in a second, quieter portrait" loading="lazy" />
           <span className="about-image-note">A PERSON, NOT A JOB TITLE.</span><span className="about-image-word" aria-hidden="true">REAL<br/>PERSON.</span><span className="image-crosshair" aria-hidden="true">+</span>
         </div>
-        <div className="about-copy" data-reveal><div className="section-meta"><span>04 — THE HUMAN</span></div><p className="about-kicker">A little about me</p><h2>I’m interested in<br />what we can <em>make possible.</em></h2><p>I’m Davix, a technology builder and founder of PRETHIM. I use APIs and software to solve everyday technology problems — and I’m interested in the thinking that makes a solution genuinely useful, not just technically impressive.</p><p>I’m still learning, building, and changing my mind when the evidence tells me to. That’s part of the work.</p><a className="text-link" href="https://prethim.name.ng" target="_blank" rel="noreferrer">PRETHIM <ArrowUpRight size={16} /></a></div>
+        <div className="about-copy" data-reveal><div className="section-meta"><span>THE HUMAN</span></div><p className="about-kicker">A little about me</p><h2>I’m interested in<br />what we can <em>make possible.</em></h2><p>I’m Davix, a technology builder and founder of PRETHIM. I use APIs and software to solve everyday technology problems — and I’m interested in the thinking that makes a solution genuinely useful, not just technically impressive.</p><p>I’m still learning, building, and changing my mind when the evidence tells me to. That’s part of the work.</p><a className="text-link" href="https://prethim.name.ng" target="_blank" rel="noreferrer">PRETHIM <ArrowUpRight size={16} /></a></div>
       </section>
 
-      <section id="contact" className="contact-section">
+      <section id="contact" className="contact-section numbered-section" data-index="V">
         <div className="contact-ghost" aria-hidden="true">HELLO.</div>
-        <div className="contact-top section-meta" data-reveal><span>05 — OPEN CHANNEL</span><span>GOOD THINGS START WITH A CONVERSATION.</span></div>
+        <div className="contact-top section-meta" data-reveal><span>OPEN CHANNEL</span><span>GOOD THINGS START WITH A CONVERSATION.</span></div>
         <div className="contact-main" data-reveal><p>Have a problem worth solving?</p><h2>Let’s talk<br /><em>about it.</em></h2><a className="glass-cta glass-cta-dark" href="mailto:davixsir654@gmail.com"><span className="cta-arrow"><Mail size={18} /></span><span>davixsir654@gmail.com</span><MoveUpRight className="cta-tail" size={15} /></a></div>
         <div className="contact-bottom"><div className="contact-glass-card"><a className="contact-glass-link" href="https://wa.me/2349018098500?text=Hi%20Davix%2C%20I%27d%20like%20to%20talk." target="_blank" rel="noreferrer"><span className="contact-link-icon"><MessageCircle size={19} /></span><span>WhatsApp</span><ArrowUpRight className="contact-link-arrow" size={16} /></a><a className="contact-glass-link" href="tel:+2349018098500"><span className="contact-link-icon"><Phone size={19} /></span><span>Call me</span><ArrowUpRight className="contact-link-arrow" size={16} /></a></div><span className="contact-location">PORT HARCOURT · NIGERIA</span></div>
       </section>
