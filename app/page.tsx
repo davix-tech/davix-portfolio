@@ -24,7 +24,7 @@ export default function Page() {
   const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setLoaded(true), 1050)
+    const timer = window.setTimeout(() => setLoaded(true), 1900)
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     const move = (event: MouseEvent) => {
