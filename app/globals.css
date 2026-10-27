@@ -353,3 +353,24 @@ button, a { -webkit-tap-highlight-color: transparent; }
  .contact-location { align-self:flex-start; }
 }
 @media(prefers-reduced-motion:reduce) { .contact-glass-card:before { display:none; } .contact-glass-link,.contact-link-icon,.contact-link-arrow { transition:none; } }
+
+
+/* Ghost numbering: monumental Roman numerals sit behind each chapter, not inside the labels. */
+.numbered-section { position:relative; isolation:isolate; }
+.numbered-section:before { content:attr(data-index); position:absolute; z-index:-1; top:clamp(28px,5vw,78px); left:clamp(16px,5.5vw,86px); font-family:var(--serif); font-size:clamp(13rem,29vw,34rem); font-weight:400; line-height:.72; letter-spacing:-.09em; color:rgba(64,56,255,.035); -webkit-text-stroke:1px rgba(64,56,255,.105); pointer-events:none; user-select:none; transform:translate3d(calc(var(--parallax-x,0px)*.12),calc(var(--interlude-shift,0px)*-.16),0) rotate(-7deg); }
+.numbered-section .section-meta { position:relative; z-index:1; }
+.numbered-section .section-meta > span:first-child { letter-spacing:.14em; }
+.intro-section:before { top:7%; left:auto; right:5%; transform:rotate(7deg); }
+.approach-section:before { top:9%; left:-.02em; font-size:clamp(15rem,33vw,39rem); color:rgba(214,250,104,.035); -webkit-text-stroke-color:rgba(64,56,255,.10); }
+.method-section:before { top:4%; left:auto; right:3%; transform:rotate(5deg); }
+.about-section:before { top:5%; left:3%; font-size:clamp(12rem,25vw,29rem); }
+.contact-section:before { content:attr(data-index); top:5%; left:2%; color:rgba(255,255,255,.025); -webkit-text-stroke-color:rgba(64,56,255,.13); }
+@media(max-width:680px) {
+ .numbered-section:before { top:52px; left:auto; right:-.035em; font-size:clamp(11rem,43vw,18rem); opacity:.9; }
+ .intro-section:before { top:75px; right:-.06em; }
+ .approach-section:before { top:65px; left:-.06em; right:auto; }
+ .method-section:before { top:60px; right:-.04em; }
+ .about-section:before { top:35px; right:-.04em; left:auto; }
+ .contact-section:before { top:65px; left:auto; right:-.04em; font-size:clamp(11rem,40vw,17rem); }
+}
+@media(prefers-reduced-motion:reduce) { .numbered-section:before { transform:none; } }
