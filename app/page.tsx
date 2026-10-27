@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { ArrowDown, ArrowUpRight, Mail, Phone, Send } from 'lucide-react'
+import { ArrowUpRight, Mail, Phone, Send } from 'lucide-react'
 
 const services = [
   { number: '01', title: 'Software that fits the problem', detail: 'Purpose-built platforms and tools shaped around the way a business actually works.' },
@@ -81,15 +81,15 @@ export default function Page() {
       <header className="site-nav">
         <a className="wordmark" href="#top" aria-label="DAVIX home">D<span>.</span></a>
         <nav aria-label="Main navigation">
-          <a href="#work">Work <span>01</span></a>
-          <a href="#services">Practice <span>02</span></a>
-          <a href="#about">About <span>03</span></a>
+          <a href="#services">Practice</a>
+          <a href="#about">About</a>
         </nav>
         <a className="nav-contact" href="#contact">Let&apos;s talk <ArrowUpRight size={15} /></a>
       </header>
 
       <section id="top" className="hero" style={{ '--spot-x': `${spotlight.x}%`, '--spot-y': `${spotlight.y}%` } as React.CSSProperties}>
-        <div className="hero-number" aria-hidden="true">00</div>
+        <div className="hero-number" aria-hidden="true">D.</div>
+        <div className="hero-name" aria-hidden="true">DAVIX</div>
         <div className="hero-portrait">
           <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Black_and_white_portrait_editing_20261027120217-UAiDFUMMT0DIXyPW3dBLLR2MDCBSEb.jpg" alt="Davix, in black and white portrait light" fetchPriority="high" />
           <div className="portrait-shade" />
@@ -101,13 +101,12 @@ export default function Page() {
           <div className="hero-bottom">
             <p className="hero-sub">Software, APIs, and intelligent systems. Built with intent, for problems worth solving.</p>
             <div className="hero-actions">
-              <a className="button button-copper" href="#contact">Start a conversation <ArrowUpRight size={16} /></a>
-              <a className="scroll-cue" href="#manifesto"><span>Explore</span><ArrowDown size={15} /></a>
+              <a className="button button-glass" href="#contact"><span className="button-orb"><ArrowUpRight size={16} /></span><span>Start a conversation</span></a>
             </div>
           </div>
         </div>
         <div className="hero-side-note"><span>Port Harcourt, Nigeria</span><i /></div>
-        <div className="hero-bottom-rule"><span>Independent by design</span><span>Scroll to descend ↓</span></div>
+        <div className="hero-bottom-rule"><span>Independent by design</span><span>Move to explore · Scroll to descend</span></div>
       </section>
 
       <section id="manifesto" className="manifesto">
@@ -118,33 +117,6 @@ export default function Page() {
           <p className="manifesto-note" data-reveal>I care about the part most people never see: the logic, architecture, and decisions that make a product useful in the real world.</p>
         </div>
         <div className="manifesto-index"><span>DAVIX / PERSONAL PRACTICE</span><span>001—004</span></div>
-      </section>
-
-      <section id="work" className="work section-wrap">
-        <div className="section-kicker" data-reveal><span>02 / Selected work</span><i /></div>
-        <div className="work-heading" data-reveal>
-          <h2>Ideas are easy.<br /><em>Systems are the work.</em></h2>
-          <p>One problem, understood deeply. A system designed to make something better.</p>
-        </div>
-        <article className="project-feature" data-reveal>
-          <div className="project-art" aria-label="Abstract REDEN system visual">
-            <div className="project-art-top"><span>CASE 001</span><span>COMMERCE / INTELLIGENCE</span></div>
-            <div className="signal-field" aria-hidden="true">
-              <span /><span /><span /><span /><span /><span /><span /><span /><span />
-            </div>
-            <div className="project-art-title">R<span>.</span></div>
-            <div className="project-art-foot"><span>Observe</span><i /><span>Reason</span><i /><span>Act</span></div>
-          </div>
-          <div className="project-info">
-            <div className="project-meta"><span>In development</span><span>Adaptive commerce orchestration</span></div>
-            <h3>REDEN<span>.</span></h3>
-            <p className="project-lead">A decision layer for ecommerce — connecting customer behaviour to intelligent action.</p>
-            <p className="project-description">REDEN helps stores interpret purchase intent, respond to customer signals, and turn scattered activity into useful decisions. One system, built to help commerce move with more clarity.</p>
-            <div className="project-tags"><span>Decision systems</span><span>Backend architecture</span><span>Commerce intelligence</span></div>
-            <a className="inline-link" href="#contact">Discuss a system like this <ArrowUpRight size={16} /></a>
-          </div>
-        </article>
-        <div className="work-footnote" data-reveal><span>01 / 01</span><p>More work will appear here when it has a story worth telling.</p></div>
       </section>
 
       <section id="services" className="services section-wrap">
@@ -235,7 +207,7 @@ export default function Page() {
       </section>
 
       <footer className="site-footer"><a className="footer-mark" href="#top">D<span>.</span></a><p>Independent thinking. Useful systems.</p><span>© DAVIX 2026</span><a href="#top" className="back-top">Back to top ↑</a></footer>
-      <a className="mobile-whatsapp" href="https://wa.me/2349018098500?text=Hi%20Davix%2C%20I%27d%20like%20to%20discuss%20a%20project." aria-label="Chat with Davix on WhatsApp"><Send size={18} /></a>
+
     </main>
   )
 }
