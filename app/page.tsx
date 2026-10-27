@@ -96,7 +96,7 @@ export default function Page() {
           <div className="portrait-caption"><span>DAVIX</span><span>Independent builder · NG</span></div>
         </div>
         <div className="hero-copy">
-          <p className="eyebrow"><span className="status-dot" /> Available for select work <span className="eyebrow-line" /></p>
+
           <h1>I build systems<br />behind businesses<br /><em>that scale.</em></h1>
           <div className="hero-bottom">
             <p className="hero-sub">Software, APIs, and intelligent systems. Built with intent, for problems worth solving.</p>
@@ -106,21 +106,21 @@ export default function Page() {
           </div>
         </div>
         <div className="hero-side-note"><span>Port Harcourt, Nigeria</span><i /></div>
-        <div className="hero-bottom-rule"><span>Independent by design</span><span>Move to explore · Scroll to descend</span></div>
+        <div className="hero-bottom-rule"><span>Port Harcourt, Nigeria</span><span>Scroll to explore</span></div>
       </section>
 
       <section id="manifesto" className="manifesto">
-        <div className="section-kicker" data-reveal><span>01 / A point of view</span><i /></div>
+        <div className="section-kicker" data-index="01" data-reveal><span>A point of view</span><i /></div>
         <div className="manifesto-layout">
           <p className="manifesto-aside" data-reveal>Not technology<br />for its own sake.</p>
           <h2 data-reveal>Make the complex<br />feel <em>inevitable.</em></h2>
           <p className="manifesto-note" data-reveal>I care about the part most people never see: the logic, architecture, and decisions that make a product useful in the real world.</p>
         </div>
-        <div className="manifesto-index"><span>DAVIX / PERSONAL PRACTICE</span><span>001—004</span></div>
+        
       </section>
 
       <section id="services" className="services section-wrap">
-        <div className="section-kicker" data-reveal><span>03 / The practice</span><i /></div>
+        <div className="section-kicker" data-index="02" data-reveal><span>The practice</span><i /></div>
         <div className="services-intro" data-reveal>
           <h2>Built around<br /><em>the problem.</em></h2>
           <p>I work across the layers that make software useful: product thinking, dependable infrastructure, integration, and intelligent automation.</p>
@@ -128,28 +128,28 @@ export default function Page() {
         <div className="service-list">
           {services.map((service) => (
             <a className="service-row" href="#contact" key={service.number} data-reveal>
-              <span className="service-number">{service.number}</span>
+              <span className="service-number" aria-hidden="true">{service.number}</span>
               <h3>{service.title}</h3>
               <p>{service.detail}</p>
               <span className="service-arrow"><ArrowUpRight size={20} /></span>
             </a>
           ))}
         </div>
-        <div className="capability-line" data-reveal><span>Architecture</span><i /><span>APIs</span><i /><span>Automation</span><i /><span>Intelligence</span><i /><span>Integration</span></div>
+        
       </section>
 
       <section className="statement">
         <div className="statement-ghost" aria-hidden="true">THINK / BUILD</div>
         <div className="statement-content" data-reveal>
-          <span className="statement-label">A working principle</span>
+          <span className="statement-label">What guides the work</span>
           <h2>Reason first.<br />Build with <em>purpose.</em></h2>
           <p>Good engineering is not more complexity. It is knowing what deserves to exist, then making it work exceptionally well.</p>
         </div>
-        <div className="statement-coordinate">05° 01&apos; N / 06° 55&apos; E</div>
+        
       </section>
 
       <section className="process section-wrap">
-        <div className="section-kicker" data-reveal><span>04 / Method</span><i /></div>
+        <div className="section-kicker" data-index="03" data-reveal><span>Method</span><i /></div>
         <div className="process-heading" data-reveal><h2>From uncertainty<br />to <em>something real.</em></h2><p>No theatre. No building blindly. A clear path from problem to product.</p></div>
         <div className="process-grid">
           {steps.map((step) => (
@@ -164,11 +164,11 @@ export default function Page() {
       </section>
 
       <section id="about" className="about section-wrap">
-        <div className="section-kicker" data-reveal><span>05 / The person</span><i /></div>
+        <div className="section-kicker" data-index="04" data-reveal><span>The person</span><i /></div>
         <div className="about-layout">
           <div className="about-image" data-reveal>
             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Edit_portrait_photo_20261027120216-qjC6r32SLTLkafCGzTahl5dOqpjDBW.jpg" alt="Davix in profile, in a quiet black and white portrait" loading="lazy" />
-            <span>FIG. 02 — OFF THE SCREEN</span>
+            <span>DAVIX — OUTSIDE THE SYSTEM</span>
           </div>
           <div className="about-copy" data-reveal>
             <p className="eyebrow">The builder behind the systems</p>
@@ -183,7 +183,7 @@ export default function Page() {
       <section id="contact" className="contact">
         <div className="contact-orbit" aria-hidden="true"><span>D</span><i /><i /><i /></div>
         <div className="contact-inner">
-          <div className="section-kicker" data-reveal><span>06 / Begin somewhere</span><i /></div>
+          <div className="section-kicker" data-index="05" data-reveal><span>Contact</span><i /></div>
           <div className="contact-heading" data-reveal><p className="eyebrow">Have a real problem to solve?</p><h2>Let&apos;s make<br /><em>it work.</em></h2></div>
           <div className="contact-grid">
             <div className="contact-details" data-reveal>
@@ -206,7 +206,7 @@ export default function Page() {
         </div>
       </section>
 
-      <footer className="site-footer"><a className="footer-mark" href="#top">D<span>.</span></a><p>Independent thinking. Useful systems.</p><span>© DAVIX 2026</span><a href="#top" className="back-top">Back to top ↑</a></footer>
+      <footer className="site-footer"><a className="footer-mark" href="#top">D<span>.</span></a><p>Thought made tangible.</p><span>© DAVIX 2026</span><a href="#top" className="back-top">Back to top ↑</a></footer>
 
     </main>
   )
