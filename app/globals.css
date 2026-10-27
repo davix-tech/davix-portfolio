@@ -331,3 +331,25 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media(prefers-reduced-motion:reduce) {
  .photo-orbit-one,.photo-orbit-two,.photo-halo,.hero-photo-wrap:before,.interlude-photo { animation:none!important; }
 }
+
+
+/* Contact actions: clear glass, tactile without competing with the main invitation. */
+.contact-bottom { align-items:center; gap:28px; }
+.contact-glass-card { display:flex; align-items:stretch; gap:5px; padding:7px; border:1px solid rgba(255,255,255,.36); border-radius:22px; background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.055)); -webkit-backdrop-filter:blur(24px) saturate(155%); backdrop-filter:blur(24px) saturate(155%); box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 16px 48px rgba(7,9,22,.12); position:relative; isolation:isolate; overflow:hidden; }
+.contact-glass-card:before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.2) 42%,transparent 60%); transform:translateX(-120%); transition:transform .85s cubic-bezier(.2,.8,.2,1); pointer-events:none; }
+.contact-glass-card:hover:before { transform:translateX(120%); }
+.contact-glass-link { min-width:170px; display:flex; align-items:center; gap:12px; padding:14px 16px; border-radius:15px; text-decoration:none; color:inherit; font-family:var(--display); font-size:15px; font-weight:600; letter-spacing:-.02em; transition:background .3s ease,transform .35s cubic-bezier(.2,.8,.2,1),color .3s ease; }
+.contact-glass-link:hover { background:rgba(255,255,255,.19); transform:translateY(-2px); }
+.contact-link-icon { width:35px; height:35px; display:grid; place-items:center; border:1px solid rgba(255,255,255,.27); border-radius:12px; background:rgba(255,255,255,.11); transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s ease; }
+.contact-glass-link:hover .contact-link-icon { transform:rotate(-7deg) scale(1.06); background:rgba(255,255,255,.22); }
+.contact-link-arrow { margin-left:auto; opacity:.65; transition:transform .3s ease,opacity .3s ease; }
+.contact-glass-link:hover .contact-link-arrow { transform:translate(3px,-3px); opacity:1; }
+.contact-location { opacity:.58; }
+@media(max-width:680px) {
+ .contact-bottom { align-items:flex-start; flex-direction:column; gap:24px; }
+ .contact-glass-card { width:100%; border-radius:20px; }
+ .contact-glass-link { min-width:0; flex:1; padding:12px 10px; gap:8px; font-size:14px; }
+ .contact-link-icon { width:31px; height:31px; flex-shrink:0; }
+ .contact-location { align-self:flex-start; }
+}
+@media(prefers-reduced-motion:reduce) { .contact-glass-card:before { display:none; } .contact-glass-link,.contact-link-icon,.contact-link-arrow { transition:none; } }
